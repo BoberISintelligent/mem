@@ -8,53 +8,48 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #1c1f24;
-  font-size: 16px; /* Базовый размер шрифта */
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem; /* Отступ снизу для разделения от круга */
 }
 
 .header img {
-  width: 12vw; /* Ширина изображения в процентах от ширины экрана */
-  height: auto; /* Автоматическая высота для сохранения пропорций */
-  margin-right: 2vw; /* Отступ справа в процентах от ширины экрана */
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
 }
 
 .score {
   color: #fff;
   text-align: center;
-  font-size: 2.25rem; /* Размер шрифта в rem для гибкости */
+  font-size: 36px;
   font-weight: 800;
   user-select: none;
 }
 
 .circle {
   position: relative;
-  width: 40vw; /* Ширина круга в процентах от ширины экрана */
-  height: 40vw; /* Высота круга в процентах от ширины экрана */
-  max-width: 300px; /* Максимальная ширина для больших экранов */
-  max-height: 300px; /* Максимальная высота для больших экранов */
-  border-radius: 50%;
-  box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
-  overflow: hidden; /* Скрыть выходящие за пределы изображения части */
 }
 
 .circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Изображение будет покрывать весь контейнер */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
   transition: transform 0.2s ease;
+  --tiltX: 10deg;
+  --tiltY: 10deg;
+  transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
 }
 
 .plus-one {
   position: absolute;
   font-family: Inter;
   text-shadow: 0px 0px 4px rgba(24, 184, 123, 0.25);
-  font-size: 1.5rem; /* Размер шрифта в rem для гибкости */
+  font-size: 24px;
   font-weight: 800;
   background: linear-gradient(180deg, #00ff2a 0%, #b300ff 100%);
   background-clip: text;
@@ -63,9 +58,6 @@ body {
   pointer-events: none;
   user-select: none;
   animation: move-up 2s forwards;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @keyframes move-up {
@@ -77,79 +69,5 @@ body {
   100% {
     opacity: 0;
     transform: translateY(-50px);
-  }
-}
-
-/* Стили для кнопки */
-.button {
-  display: inline-block;
-  padding: 0.625rem 1.25rem; /* Внутренние отступы в rem */
-  font-size: 1rem; /* Размер шрифта в rem */
-  text-align: center;
-  text-decoration: none;
-  background-color: #db0d30;
-  color: white;
-  border: none;
-  border-radius: 0.3125rem; /* Закругленные углы в rem */
-  cursor: pointer;
-  margin-top: 1.25rem; /* Отступ сверху в rem */
-  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
-}
-
-/* Стили для состояния наведения */
-.button:hover {
-  background-color: #00008b;
-}
-
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 768px) {
-  .header img {
-    width: 20vw; /* Ширина изображения для мобильных устройств */
-    margin-right: 4vw; /* Отступ справа для мобильных устройств */
-  }
-
-  .score {
-    font-size: 1.5rem; /* Размер шрифта для мобильных устройств */
-  }
-
-  .circle {
-    width: 60vw; /* Ширина круга для мобильных устройств */
-    height: 60vw; /* Высота круга для мобильных устройств */
-  }
-
-  .plus-one {
-    font-size: 1rem; /* Размер шрифта для мобильных устройств */
-  }
-
-  .button {
-    padding: 0.5rem 1rem; /* Внутренние отступы для кнопки на мобильных устройствах */
-    font-size: 0.875rem; /* Размер шрифта для кнопки на мобильных устройствах */
-    margin-top: 0.75rem; /* Отступ сверху для кнопки на мобильных устройствах */
-  }
-}
-
-@media (max-width: 480px) {
-  .header img {
-    width: 25vw; /* Ширина изображения для очень маленьких экранов */
-    margin-right: 5vw; /* Отступ справа для очень маленьких экранов */
-  }
-
-  .score {
-    font-size: 1.25rem; /* Размер шрифта для очень маленьких экранов */
-  }
-
-  .circle {
-    width: 70vw; /* Ширина круга для очень маленьких экранов */
-    height: 70vw; /* Высота круга для очень маленьких экранов */
-  }
-
-  .plus-one {
-    font-size: 0.875rem; /* Размер шрифта для очень маленьких экранов */
-  }
-
-  .button {
-    padding: 0.5rem 0.75rem; /* Внутренние отступы для кнопки на очень маленьких экранах */
-    font-size: 0.75rem; /* Размер шрифта для кнопки на очень маленьких экранах */
-    margin-top: 0.5rem; /* Отступ сверху для кнопки на очень маленьких экранах */
   }
 }
