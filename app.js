@@ -12,9 +12,9 @@ function setScore(score) {
 }
 
 const images = [
-  { score: 50, src: './assets/pohyi.jpg' },
-  { score: 100, src: './assets/photo_2022-04-02_16-31-43.jpg' },
-  { score: 150, src: './assets/photo_2022-12-03_09-28-27.jpg' },
+  { score: 50, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTRzZWh6N3oybnpodDk4bnl2aXZ3c2tjNHF2Mm51N2Yzd3hzemd3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5oYgxQKHhEjEk/giphy-downsized-large.gif' },
+  { score: 100, src: './assets/photo_2022-12-03_09-28-27.jpg' },
+  { score: 150, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjJiNGZuNnI1cDNwMTV0NWk1OTBiN2Z6cDFhNDdqcHltZjIwb2lxYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DohrzSCB07moM/giphy.gif' },
   { score: 200, src: './assets/200.jfif' },
   { score: 250, src: './assets/giphy(1).gif' },
   { score: 300, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWN5dTFvNDJuMXduZTJ0bmxrc2Zmb3VkZmY0bTB2NWZmMGl5ZjdtayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tHIRLHtNwxpjIFqPdV/giphy.gif' },
@@ -28,10 +28,10 @@ const images = [
   { score: 700, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHpnb29uOWRtc3R1dmtzMnZzZHh4dWxkenQyZ3I2M2g5aTJoZTR4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jt96LuT92aIodIakQT/giphy.gif' },
   { score: 750, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzgyeW5jcTBocG13NDFwZWN3NjR2bGtoM2kzNTR5YmcxbGR1M2ltbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VGuAZNdkPUpEY/giphy.gif' },
   { score: 800, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2NmdmI4eHE5em0zMjE4cW9pazY5enQ5enloMTF1Ynd3aDZxaHN0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WjSx3rJqsa448/giphy.gif' },
-  { score: 850, src: './assets/pohyi.jpg' },
-  { score: 900, src: './assets/pohyi.jpg' },
-  { score: 950, src: './assets/pohyi.jpg' },
-  { score: 1000, src: './assets/pohyi.jpg' },
+  { score: 850, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnNqY2Z5YzU4eW11OGJlZmJvYWl1OGJqMXh6dGh5czBseWRhbmhvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mRakmooNljBjW/giphy.gif' },
+  { score: 900, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWZjOHBkdzZobWd1YXpzcmhyZDdjMWozaDlvMjZtaGhzcXFzMDdmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MUHNdrm3vk7MoyUsCO/giphy.gif' },
+  { score: 950, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXMwbWwzeW90NWRuaXg3dW5waTAwang4YW9zb2x5YjcwenNtcDN3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/otnqsqqzmsw7K/giphy.gif' },
+  { score: 1000, src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3U0endqamlndGF6cXY1NTNmdGwxejRzbDJ0YWt4dXV5NjBucGhkYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tsX3YMWYzDPjAARfeg/giphy.gif' },
   // Добавляйте новые картинки и пороговые значения
 ];
 
