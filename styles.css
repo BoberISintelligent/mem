@@ -12,20 +12,22 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column; /* Выравниваем элементы по вертикали */
   align-items: center;
   justify-content: center;
 }
 
 .header img {
-  width: 50px;
-  height: 50px;
-  margin-right: 14px;
+  width: 10vw; /* Используем адаптивный размер */
+  height: auto; /* Сохраняем пропорции изображения */
+  margin-right: 0; /* Убираем отступ, так как элементы теперь вертикальны */
+  margin-bottom: 10px; /* Добавляем отступ снизу */
 }
 
 .score {
   color: #fff;
   text-align: center;
-  font-size: 36px;
+  font-size: 6vw; /* Адаптивный размер шрифта */
   font-weight: 800;
   user-select: none;
 }
@@ -35,8 +37,8 @@ body {
 }
 
 .circle img {
-  width: 200px;
-  height: 200px;
+  width: 50vw; /* Адаптивный размер изображения */
+  height: auto; /* Сохраняем пропорции изображения */
   border-radius: 50%;
   box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
   transition: transform 0.2s ease;
@@ -49,7 +51,7 @@ body {
   position: absolute;
   font-family: Inter;
   text-shadow: 0px 0px 4px rgba(24, 184, 123, 0.25);
-  font-size: 24px;
+  font-size: 6vw; /* Адаптивный размер шрифта */
   font-weight: 800;
   background: linear-gradient(180deg, #00ff2a 0%, #b300ff 100%);
   background-clip: text;
@@ -75,19 +77,53 @@ body {
 /* Стили для кнопки */
 .button {
   display: inline-block;
-  padding: 10px 20px; /* Размеры внутренних отступов кнопки */
-  font-size: 16px; /* Размер шрифта */
-  text-align: center; /* Выравнивание текста по центру */
-  text-decoration: none; /* Убираем подчеркивание ссылки */
-  background-color: #db0d30; /* Цвет фона кнопки */
-  color: white; /* Цвет текста */
-  border: none; /* Убираем границу кнопки */
-  border-radius: 5px; /* Закругляем углы кнопки */
-  cursor: pointer; /* Заменяем стандартный указатель на указатель руки при наведении */
-  margin-top: 20px; /* Отступ сверху */
+  padding: 2vw 4vw; /* Адаптивные размеры внутренних отступов кнопки */
+  font-size: 4vw; /* Адаптивный размер шрифта */
+  text-align: center; 
+  text-decoration: none; 
+  background-color: #db0d30;
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  margin-top: 5vh; /* Адаптивный отступ сверху */
+  width: 80vw; /* Кнопка занимает большую часть экрана */
+  max-width: 300px; /* Максимальная ширина для больших экранов */
 }
 
 /* Стили для состояния наведения */
 .button:hover {
-  background-color: #00008b; /* Цвет фона кнопки при наведении */
+  background-color: #00008b; 
+}
+
+/* Медиа-запрос для крупных экранов */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row; /* На больших экранах выравниваем элементы горизонтально */
+  }
+
+  .header img {
+    margin-right: 14px;
+    margin-bottom: 0;
+    width: 50px;
+  }
+
+  .score {
+    font-size: 36px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: auto; /* Убираем ширину, чтобы кнопка была стандартного размера */
+  }
+
+  .circle img {
+    width: 200px;
+  }
+
+  .plus-one {
+    font-size: 24px;
+  }
 }
