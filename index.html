@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clicker</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Стили для кнопки */
+      .button {
+          display: inline-block;
+          padding: 10px 20px; /* Размеры внутренних отступов кнопки */
+          font-size: 16px; /* Размер шрифта */
+          text-align: center; /* Выравнивание текста по центру */
+          text-decoration: none; /* Убираем подчеркивание ссылки */
+          background-color: #db0d30; /* Цвет фона кнопки */
+          color: white; /* Цвет текста */
+          border: none; /* Убираем границу кнопки */
+          border-radius: 5px; /* Закругляем углы кнопки */
+          cursor: pointer; /* Заменяем стандартный указатель на указатель руки при наведении */
+          margin-top: 20px; /* Отступ сверху */
+      }
+      /* Стили для состояния наведения */
+      .button:hover {
+          background-color: #00eeff; /* Цвет фона кнопки при наведении */
+      }
+
+      body {
+          background-image: url('D:\Рабочий стол\Новая папка\31559.jpg'); /* замените путь_к_изображению.jpg на путь к вашему изображению */
+          background-size: cover; /* чтобы фоновое изображение занимало всю доступную область */
+          background-repeat: no-repeat; /* чтобы изображение не повторялось */
+          /* Дополнительные стили, если необходимо */
+      }
+    </style>
   </head>
   <body>
     <div class="game">
@@ -15,6 +42,10 @@
       <div class="circle">
         <img id="circle" src="./assets/prikol1.jpg" alt="Clicker" />
       </div>
+      <!-- Кнопка -->
+      <p align="center">
+        <a href="https://www.youtube.com/watch?v=FzG4uDgje3M" class="button">Song</a>
+      </p>
     </div>
     <script src="app.js" defer></script>
   </body>
